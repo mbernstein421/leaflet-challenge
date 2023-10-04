@@ -43,6 +43,5 @@ function createMap(data) {
     legend.addTo(map);
 }
 
-fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson')
-    .then(response => response.json())
+d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson')
     .then(createMap);
